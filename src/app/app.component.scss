@@ -4,14 +4,16 @@
   color: black;
   display: inline-block;
   padding: 12px;
-  text-decoration: none;
-  text-align: center;
-  margin: auto;
-  white-space: nowrap;
+  text-decoration: blink;
+  text-align: justify;
+  position: relatlive;
+ font-size: medium;
+//  margin-right: 15px;
+}
 
-  
-  // overflow: auto;
-  // white-space: nowrap;
+.nav.nav-tabs a {
+  text-decoration:none;
+
 }
 
 .nav.nav-tabs li:hover {

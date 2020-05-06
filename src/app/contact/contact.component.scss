@@ -1,6 +1,7 @@
 body {
 background-color: white;
 margin: 200px;
+border: 3px groove;
 
 }
 div.contact {
@@ -17,3 +18,22 @@ div.message {
 label {
     text-align: right;
 }
+
+textarea {
+    width: 300px;
+    height: 150px;
+  }
+  title {
+    background: grey; 
+  }
+
+  input {
+    display: inline;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: white;
+  }
+  input.ng-invalid {
+    border: 3px red solid;
+  }
