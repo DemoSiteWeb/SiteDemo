@@ -39,15 +39,6 @@ text: string = '  Nelson Rolihlahla Mandela (/mænˈdɛlə/;[1] Xhosa: [xolíɬa
   ngOnInit() {
 
   }
-  onSwitch() {
-    if (this.appareilStatus === 'allumé') {
-      this.appareilService.switchOffOne(this.index);
-    } else if (this.appareilStatus === 'éteint') {
-      this.appareilService.switchOnOne(this.index);
-    }
-  }
-  submit(user) {
-  console.log(this.user);
-  }
+  
 }
 

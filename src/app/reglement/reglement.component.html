@@ -1,20 +1,80 @@
-<body class="accueil">
+<style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  </style>
+
+
+
+<body class="accueil" style="text-align:center;">
   <!-- <p><a><img src="./assets/images/Joseph_Mvogo.png" alt="photo_mvogo_joseph" height="300" width="400"></a></p>
   <h3> -->
     <!-- <strong>Je suis Monsieur MVOGO NGANOMA JOSEPH</strong> -->
   <!-- </h3> -->
   <p class="description"> 
     Veuillez procéder à un reglement via le lien paypal ci-dessus<br>
-      and aller dans l'onglet Contact pour envoyer un mail<br>
-     et y joindre la reglement paypal, vous recevrez ensuite vos livres directement chez vous
+      ensuite, aller dans le menu Contact pour envoyer un mail<br>
+     et y joindre le reglement paypal, vous recevrez ensuite vos livres directement chez vous
 
   </p>
+  <!-- <h2>Tooltip</h2>
+  <p>Move the mouse over the text below:</p>
   
+  <div class="tooltip">Hover over me
+    <span class="tooltiptext">Tooltip text</span>
+  </div> -->
   <!-- <img src=".\assets\images\PP_logo_h_100x26.png"> -->
-  <p><img src=".\assets\images\PP_logo_h_100x26.png">
-    <a src ="" href="https://www.paypal.com/us/home"> Paypal</a></p>
-  
+  <table>
+    <thead>Choisissez votre mode de paiement</thead>
+    <tbody>
+      <tr>
+        <td>
+          <!-- <div> -->
+        <img src=".\assets\images\PP_logo_h_100x26.png">
+        <!-- </div> -->
+      </td> 
+         <p> <a src ="" href="https://www.paypal.com/us/home" target="_blank"> <strong>Par Paypal</strong> </a></p>
+           
+      </tr>
+    
+    </tbody>
+  </table>
 
-  
+
  
   </body>
