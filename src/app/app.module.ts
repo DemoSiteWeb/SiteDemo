@@ -11,6 +11,10 @@ import {RouterModule} from '@angular/router';
 import {AuthService} from './services/Auth.service';
 import { ContactComponent } from './contact/contact.component';
 import { CeremoniesComponent } from './ceremonies/ceremonies.component';
+import { FourOhFourComponentComponent } from './four-oh-four-component/four-oh-four-component.component';
+import { PhotosComponent } from './photos/photos.component';
+import { VideosComponent } from './videos/videos.component';
+import { ReglementComponent } from './reglement/reglement.component';
 
 
 const appRoutes: Routes = [
@@ -18,7 +22,12 @@ const appRoutes: Routes = [
   { path: 'publication', component: MonPublicationComponent},
   { path: '', component: MonAccueilComponent},
   { path: 'ceremonies', component: CeremoniesComponent},
-  // { path: '', component: AppareilComponent}
+  { path: 'videos', component: VideosComponent},
+  { path: 'reglement', component: ReglementComponent},
+  { path: 'photos', component: PhotosComponent},
+  { path: 'not-found', component: FourOhFourComponentComponent},
+  { path: '**', redirectTo: 'not-found' }
+
 ];
 
 @NgModule({
@@ -29,6 +38,10 @@ const appRoutes: Routes = [
     MonPublicationComponent,
     ContactComponent,
     CeremoniesComponent,
+    FourOhFourComponentComponent,
+    PhotosComponent,
+    VideosComponent,
+    ReglementComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +53,7 @@ const appRoutes: Routes = [
     AppareilService,
     AuthService
   ],
-  bootstrap: [AppComponent, MonPublicationComponent,ContactComponent,CeremoniesComponent,MonAccueilComponent],
+  bootstrap: [AppComponent, MonPublicationComponent,ContactComponent,CeremoniesComponent,MonAccueilComponent,ReglementComponent],
 
 })
 export class AppModule {

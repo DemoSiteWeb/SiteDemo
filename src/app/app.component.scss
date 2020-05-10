@@ -1,8 +1,8 @@
 
-.nav.nav-tabs li {
+.navbar-nav li {
   background-color: cadetblue;
   color: black;
-  display: inline-block;
+  // display: inline-block;
   padding: 12px;
   text-decoration: blink;
   text-align: justify;
@@ -11,22 +11,17 @@
 
 }
 
-.nav.nav-tabs a {
+.nav-item a {
   text-decoration:none;
 
 }
 
-.nav.nav-tabs li:hover {
+.navbar-nav li:hover {
   background-color: #ccc;
 }
 
-.nav.nav-tabs a.active {
-  background-color: #4CAF50;
-  color: white;
-  
-}
 
-.vertical-menu {
+.collapse.navbar-collapse {
   position: relative;
   margin:20px;
   
@@ -41,3 +36,8 @@ h1 {
   background-color: white;
   position: relative;
 }
+
+#navbarDropdownMenuLink:hover {
+
+  display: block;
+} 
