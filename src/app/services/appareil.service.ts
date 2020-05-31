@@ -1,5 +1,7 @@
-import {Input} from '@angular/core';
+import { Input, Injectable, Directive } from '@angular/core';
 
+@Directive()
+@Injectable()
 export class AppareilService {
   appareils = [
     {
