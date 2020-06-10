@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   //   this.appareils = this.appareilService.appareils;
   // }
   ngOnInit() {
-    this.appareils = this.appareilService.appareils;
+    // this.appareils = this.appareilService.appareil;
     const counter = Observable.interval(1000);
     this.counterSubscription = counter.subscribe(
       (value) => {

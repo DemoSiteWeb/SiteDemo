@@ -1,36 +1,42 @@
-import { Input, Injectable, Directive } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Directive()
 @Injectable()
 export class AppareilService {
-  appareils = [
+
+  appareilsSubject = new Subject<any[]>();
+
+  private appareils = [
     {
+      id: 1,
       name: 'Machine à laver',
       status: 'éteint'
     },
     {
+      id: 2,
       name: 'Frigo',
       status: 'allumé'
     },
     {
+      id: 3,
       name: 'Ordinateur',
       status: 'éteint'
     }
   ];
-  @Input() appareilName: string;
-  @Input() appareilStatus: string;
-  @Input() index: number;
+  
+  constructor(private httpClient: HttpClient) { }
 
-
-  switchOnOne(i: number) {
-    this.appareils[i].status = 'allumé';
-  }
-
-  switchOffOne(i: number) {
-    this.appareils[i].status = 'éteint';
-  }
-
-  onClear() {
-    console.log('hello');
-  }
+  saveAppareilsToServer() {
+    this.httpClient
+      .post('https://httpclient-demo.firebaseio.com/appareils.json', this.appareils)
+      .subscribe(
+        () => {
+          console.log('Enregistrement terminé !');
+        },
+        (error) => {
+          console.log('Erreur ! : ' + error);
+        }
+      );
+}
 }
